@@ -272,9 +272,9 @@ data "terraform_remote_state" "network" {
   backend = "remote"
 
   config = {
-    organization = "tonnyluiz-terraform"
+    organization = var.tfc_org_name
     workspaces = {
-          name = "learn-terraform-run-triggers-network"
+          name = var.tfc_network_workspace_name
     }
   }
 }
